@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'io.th0rgal'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal() //run buildtools before: https://www.spigotmc.org/wiki/buildtools/
+    mavenCentral()
+    maven { url 'https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy' }
+}
+
+dependencies {
+    implementation group: 'org.spigotmc', name: 'spigot', version: '1.12.2-R0.1-SNAPSHOT' //uses local maven buildtools repo
+    implementation group: 'net.bytebuddy', name: 'byte-buddy-dep', version: '1.9.13'
+}
